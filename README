@@ -1,0 +1,29 @@
+This project contains a very basic Android port of ccnfileproxy.
+
+==RUNNING & TESTING==========================================================
+
+1. Start with default settings (serve /mnt/sdcard at ccnx:/ccnfileproxy)
+2. Start ccnd on your laptop
+3. From computer: ccndc add / tcp <phone_ip>
+4. To see what's inside the directory, from computer: ccnexplore -root /ccnfileproxy
+5. To get files, use ccngetfile on your computer
+
+
+==COMPILE & INSTALL==========================================================
+
+Tested SDK: android-sdk-r16
+
+You must compile ccnx/ and the projects inside ccnx/android so that make can link 
+to ccnx/javasrc/ccn.jar and ccnx/android/CCNx-Android-Lib/bin/classes.jar
+
+In the Makefile, modify ANDROID_LIB and JAVASRC to your local folders
+
+$ make setup
+$ make
+
+CCNx-Android-Services must be installed prior to running CCNx-Android-FileProxy.
+If you have trouble starting CCNx-Android-Services, force quit the application 
+and try again. If that doesn't work, restart your phone.
+
+$ adb install bin/CCNx-Android-FileProxy
+
