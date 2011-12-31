@@ -25,5 +25,5 @@ CCNx-Android-Services must be installed prior to running CCNx-Android-FileProxy.
 If you have trouble starting CCNx-Android-Services, force quit the application 
 and try again. If that doesn't work, restart your phone.
 
-$ adb install bin/CCNx-Android-FileProxy
+$ adb install bin/CCNx-Android-FileProxy-debug.apk
 
